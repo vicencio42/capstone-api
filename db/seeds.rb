@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Comic.create!(name: "Berserk Vol. 1", author: "Kentaro Miura", genre: "Dark Fantasy", price: 17.99)

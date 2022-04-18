@@ -1,0 +1,30 @@
+  ### Photos Index
+GET http://localhost:3000/comics.json
+
+### Photos Create
+POST http://localhost:3000/comics.json
+Content-Type: application/json
+
+{
+"name": "Test name",
+"author": "test author",
+"genre": "manga"
+"price": 9.99
+}
+
+### Photos Show
+GET http://localhost:3000/comics/1.json
+
+### Photos Update
+PATCH http://localhost:3000/comics/1.json
+Content-Type: application/json
+
+{
+"name": "New name",
+"author": "test author",
+"genre": "manga"
+"price": 9.99
+}
+
+### Photos Destroy
+DELETE http://localhost:3000/comics/1.json

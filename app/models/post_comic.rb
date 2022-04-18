@@ -1,0 +1,2 @@
+class PostComic < ApplicationRecord
+end
