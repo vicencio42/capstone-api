@@ -29,6 +29,17 @@ Content-Type: application/json
 ### Comics Destroy
 DELETE http://localhost:3000/comics/1.json
 
+### Users create (signup)
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Vicencio Mendez",
+  "email": "vicencio42@gmail.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
 ### api requests
 
 https://api.myanimelist.net/v2/manga
