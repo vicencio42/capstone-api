@@ -12,5 +12,8 @@ Rails.application.routes.draw do
 
    #sessions
    post "/sessions" => "sessions#create"
+
+   # # manga
+   # get "/mangas" => "mangas#mangatest"
   
 end

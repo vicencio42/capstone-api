@@ -45,19 +45,27 @@ def destroy
   render json: {message: "Product has been destroyed!!!"}
 end
 
+# def manga
+
+#   headers = {
+#     "X-RapidAPI-Host" => "jikan1.p.rapidapi.com",
+#     "X-RapidAPI-Key" => "#{Rails.application.credentials.anime_api[:api_key]}"
+#   }
+
+#   response = HTTP.headers(headers).get("https://jikan1.p.rapidapi.com/meta/requests/anime/today")
+
+#   data = JSON.parse(response)
+
+#   render json: data
+
+# end
+
 def manga
-
-  headers = {
-    "X-RapidAPI-Host" => "jikan1.p.rapidapi.com",
-    "X-RapidAPI-Key" => "#{Rails.application.credentials.anime_api[:api_key]}"
-  }
-
-  response = HTTP.headers(headers).get("https://jikan1.p.rapidapi.com/meta/requests/anime/today")
+  response = HTTP.get("https://api.jikan.moe/v4/manga")
 
   data = JSON.parse(response)
 
   render json: data
-
 end
 
 end
