@@ -29,7 +29,7 @@ Content-Type: application/json
 ### Comics Destroy
 DELETE http://localhost:3000/comics/1.json
 
-### Users create (signup)
+### Users Create (Signup)
 POST http://localhost:3000/users
 Content-Type: application/json
 
@@ -38,6 +38,15 @@ Content-Type: application/json
   "email": "vicencio42@gmail.com",
   "password": "password",
   "password_confirmation": "password"
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+{
+  "email": "vicencio42@gmail.com",
+  "password": "password"
 }
 
 ### api requests

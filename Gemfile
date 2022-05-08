@@ -14,6 +14,7 @@ gem "puma", "~> 5.0"
 # my animelist api
 gem 'myanimelist_client'
 gem 'http'
+gem 'jwt'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
