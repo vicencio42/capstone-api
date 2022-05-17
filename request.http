@@ -1,14 +1,15 @@
-  ### Comics Index
+### Comics Index
 GET http://localhost:3000/comics.json
 
 ### Comics Create
 POST http://localhost:3000/comics.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI3NTI0MzJ9.5TeNZlxSlpm5Qo81SntJQYNduHdGX9oF33XchyK7oHE
 Content-Type: application/json
 
 {
-"name": "Test name",
+"name": "Test a name",
 "author": "test author",
-"genre": "manga"
+"genre": "manga test",
 "price": 9.99
 }
 
@@ -20,14 +21,51 @@ PATCH http://localhost:3000/comics/1.json
 Content-Type: application/json
 
 {
-"name": "New name",
+"name": "Newas2 name",
 "author": "test author",
-"genre": "manga"
+"genre": "manga",
 "price": 9.99
 }
 
 ### Comics Destroy
 DELETE http://localhost:3000/comics/1.json
+
+### Manga Index
+GET http://localhost:3000/mangas.json
+
+### Wishlist Index
+GET http://localhost:3000/wishlists
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI4MjUxNTZ9.2nn_tu07QHKnP74sblFNL_WPp8j0YoHj2m3H8raWKMM
+Content-Type: application/json
+
+### Wishlist Create
+POST http://localhost:3000/wishlists
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI4MjUxNTZ9.2nn_tu07QHKnP74sblFNL_WPp8j0YoHj2m3H8raWKMM
+Content-Type: application/json
+
+{
+"user-id": "Test 1user",
+"comic_id": "test 1id",
+"image_url": "manga",
+"title": "test title"
+}
+
+### Wishlist Show
+GET http://localhost:3000/wishlists/1.json
+
+### Wishlist Update
+PATCH http://localhost:3000/wishlists/1.json
+Content-Type: application/json
+
+{
+"name": "Newas2 name",
+"author": "test author",
+"genre": "manga",
+"price": 9.99
+}
+
+### Wishlist Destroy
+DELETE http://localhost:3000/wishlists/6.json
 
 ### Users Create (Signup)
 POST http://localhost:3000/users
@@ -49,9 +87,5 @@ Content-Type: application/json
   "password": "password"
 }
 
-### api requests
-
-https://api.myanimelist.net/v2/manga
-Authorization: Bearer YOUR_TOKEN
 
 
